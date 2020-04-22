@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+
+
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    border: 1px solid #000;
+    font-family: 'Krona', sans-serif;
+    text-align: center;
+}
+
+nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h2:hover div.underline{
+    left:0px;
+}
+h2:hover{
+    transform: scale(2);
+}
+h2 {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 10px;
+width:10vw;
+    height:auto;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 20px;
+        transition:all .5s ease-out;
+
+}
+
+div.underline {
+    position: absolute;
+    height: 5px;
+width:10vw;
+    bottom:5px;
+    background-color: orangered;
+    left:-500%;
+    transition:all .5s ease-out;
+
+}
+
+.intro {
+    position: relative;
+    flex-basis: 50%;
+}
+
+h2.bad {
+    color: white;
+}
+
+#bad-intro {
+    position:relative;
+    bottom:-100%;
+    opacity: 0;
+    background-color: black;
+}
+
+#badnews {
+    color: white;
+
+}
+
+div.link {
+    position: relative;
+    height: auto;
+    opacity: 0;
+    padding: 10px;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+}
+
+
+
+/*THE GOOD PAGE*/
+
+div.content {
+    position: relative;
+    height: 400vh;
+}
+
+#first-paragraph {
+    text-align: center;
+    font-family: 'Six Caps',sans-serif;
+    height: 100vh;
+    font-size: 15vw;
+     margin-top: 10vh;
+}
+
+.item {
+position:relative;
+    left:5vw;
+    margin: auto;
+    margin-top: 20vw;
+    margin-bottom: 30vw;
+
+    font-family: "Six-Caps", sans-serif;
+    height: 30vw;
+    width: 30vw;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+#market-slide {
+    right:5vw;
+    color:white;
+    background-color: black;
+    font-size: 2vw;
+    line-height: 35px;
+    padding:20px;
+   
+}
+
+
+/*
+
+header {
+    margin-top: 100px;
+}
+
+div h2 {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 50px;
+}
+
+.navcontainer {
+    display: relative;
+}
+
+.navinfo {
+    padding: 10px;
+    position: relative;
+    opacity: .0;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 300px;
+    font-family: 'Krona', sans-serif;
+}
+
+.underline {
+    position: relative;
+    left: -200px;
+    height: 5px;
+    width: auto;
+    background-color: lawngreen;
+    transition: all .5s ease-in;
+}
+
+.link {
+    border: 1px solid #000;
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 50px;
+    overflow: hidden;
+    position: absolute;
+    left: 45%;
+    text-align: center;
+    transition: all .1s ease-in;
+}
+
+
+div.link:hover {
+    transform: scale(2);
+    font-weight: 900;
+}
+
+.link:hover div.underline {
+    left: 0;
+}
+*/
