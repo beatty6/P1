@@ -8,10 +8,10 @@ $(document).ready(function () {
             opacity: '1'
         }, "fast");
 
-        $("div#bad-intro").delay(1000).animate({
+        $("div#bad-intro").delay(500).animate({
             opacity: '1',
             bottom: 0
-        }, 3000);
+        }, 1000);
 
         $("div.link a").css({
             color: "orangered",
@@ -31,7 +31,7 @@ $(document).ready(function () {
         $("div#badnews").animate({
             bottom: -50,
             opacity: '1'
-        }, "slow");
+        }, 500);
 
         $("div.link a").css({
             color: "orangered",
