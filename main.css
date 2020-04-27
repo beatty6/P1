@@ -7,12 +7,7 @@
 
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    border: 1px solid #000;
     font-family: 'Krona', sans-serif;
     text-align: center;
 }
@@ -24,36 +19,37 @@ nav {
     justify-content: space-around;
 }
 
-h2:hover div.underline {
-    left: 0px;
+a.continue {
+    text-align: left;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 1px 1px 2px grey;
+    font-size: 60px;
+    font-weight: 900;
+    color: orangered;
+    transition: all .25s ease-in;
 }
 
-h2:hover {
-    transform: scale(2);
+a.continue:hover {
+    color: white;
+    box-shadow: 3px 3px 4px grey;
+    background-color: orangered;
 }
 
 h2 {
+    opacity: 0;
+    top: -100%;
+
+
+
+    line-height: 24px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 15vh;
     padding-bottom: 10px;
     width: 10vw;
-    height: auto;
     margin: auto;
-    overflow: hidden;
-    cursor: pointer;
     font-size: 20px;
-    transition: all .5s ease-out;
-
-}
-
-div.underline {
-    position: absolute;
-    height: 5px;
-    width: 10vw;
-    bottom: 5px;
-    background-color: orangered;
-    left: -500%;
-    transition: all .5s ease-out;
 
 }
 
@@ -63,18 +59,24 @@ div.underline {
 }
 
 h2.bad {
+    opacity: 0;
+    top: -300px;
     color: white;
 }
 
 #bad-intro {
-    position: relative;
-    bottom: -100%;
-    opacity: 0;
     background-color: black;
 }
 
+#goodnews {
+    right: -300px;
+
+}
+
 #badnews {
+    opacity: 0;
     color: white;
+    left: -300px;
 
 }
 
@@ -91,7 +93,7 @@ div.link {
 
 /*THE GOOD PAGE*/
 div.nav {
-    position: fixed;
+    position: absolute;
     border-radius: 50%;
     padding: 30px;
     height: 100px;
@@ -101,35 +103,35 @@ div.nav {
     font-size: 40px;
 }
 
-div.content {
-    position: relative;
-    height: 400vh;
-}
+
 
 #first-paragraph {
+    width: 30vw;
+    margin: auto;
     text-align: center;
     font-family: 'Six Caps', sans-serif;
     height: 100vh;
     font-size: 15vw;
-    margin-top: 10vh;
+    padding: 50px;
 }
 
 .item {
+    z-index: 0;
+    background-color: white;
     position: relative;
-    left: 5vw;
+    left: 20vw;
     margin: auto;
     margin-top: 20vw;
     margin-bottom: 30vw;
 
-    font-family: "Six-Caps", sans-serif;
+    font-family: 'Six Caps', sans-serif;
     height: 30vw;
-    width: 30vw;
-    padding: 10px;
-    border: 1px solid #000;
+    width: 40vw;
+
 }
 
-#market-slide {
-    right: 5vw;
+#social-distancing {
+    left: 0vw;
     color: white;
     background-color: black;
     font-size: 1.5vw;
@@ -138,12 +140,18 @@ div.content {
 
 }
 
-#market-slide span {
+#familytime{
+    padding:30px 3vw;
+}
+
+div.text {
+    padding: 20px;
+    height: 10vw;
     color: white;
     font-size: 2vw;
     line-height: 10px;
     letter-spacing: 0px;
-    animation: socialdistance 6s ease-in-out infinite;
+    animation: socialdistance 2s ease-in-out infinite;
 }
 
 @keyframes socialdistance {
@@ -153,29 +161,77 @@ div.content {
     }
 }
 
-path#sp {
-    stroke-dasharray: 500px;
-    
-
-    animation:path 3s ease-out infinite;
+path#sp1 {
+    stroke-dashoffset: 5000px;
+    stroke-dasharray: 5000px;
+    stroke: white;
+    stroke-width:9;
+    animation: path 10s linear forwards;
 }
 
 @keyframes path {
-    100% {
-        stroke-width:4;
-        stroke-dasharray: 4000px;
+    to {
+        stroke-dashoffset: 0px;
 
     }
 }
-div.svg{
-    margin:30px 5px;
-}
-div.caption{
-    font-size: 12px;
-    text-align: left;
-    width:10vw;
+
+path#sp2 {
+    stroke-dashoffset: 5000px;
+    stroke-dasharray: 5000px;
+    stroke: orangered;
+    stroke-width: 9;
+    animation: path2 5s ease-in 10s forwards;
 }
 
+@keyframes path2 {
+    to {
+        stroke-dashoffset: 0px;
+
+    }
+}
+
+div#marketpaths {
+    background-color: black;
+}
+
+div#marketpaths .caption{
+    color: white;
+}
+
+div.svg {
+    display: block;
+    top:20px;
+margin:auto;
+    position:absolute;
+    width: 35vw;
+}
+
+
+div.bigbold {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+div.caption {
+    bottom:10px;
+    line-height: 14px;
+    padding-top: 10px;
+    position:absolute;
+    font-size: 12px;
+    text-align: left;
+    width: 15vw;
+}
+div#dolphins{
+    margin-bottom: 400px;
+
+    margin:auto;
+    overflow: hidden;
+}
+div#dolphins .svg{
+    position:relative;
+    
+}
 /*
 
 header {

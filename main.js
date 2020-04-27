@@ -1,106 +1,37 @@
 $(document).ready(function () {
 
+    $("h2.good").animate({
+        top: 0,
+        opacity: '1'
+    }, 2000);
+    $("div#goodnews").delay(2000).animate({
+        right: 0,
+        opacity: '1'
+    }, 2000);
 
-    $("h2.good").click(function () {
+    $("h2.bad").delay(4500).animate({
+        top: 0,
+        opacity: '1'
+    }, 2000);
 
-        $("div#goodnews").animate({
-            bottom: -50,
-            opacity: '1'
-        }, "fast");
 
-        $("div#bad-intro").delay(500).animate({
-            opacity: '1',
-            bottom: 0
-        }, 1000);
+    $("div#badnews").delay(7500).animate({
+        left: 0,
+        opacity: '1'
+    }, 2000);
 
-        $("div.link a").css({
-            color: "orangered",
-            opacity: '1'
-        }, "slow");
 
-        $("div#goodnews a").delay(1000).animate({
-            fontSize: 40
-        }, "fast");
+    $("div.continue").delay(15000).animate({
+        height: 20
+    }, 500);
 
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop < $("div").offset().top) {
+            $("div").css({
+                "color": "red";
+            });
+        }
     });
-
-
-
-    $("h2.bad").click(function () {
-
-        $("div#badnews").animate({
-            bottom: -50,
-            opacity: '1'
-        }, 500);
-
-        $("div.link a").css({
-            color: "orangered",
-            opacity: '1'
-        }, "slow");
-
-    });
-
-    $("#market-slide").scroll(function () {
-        $(this).css("background-color", "green");
-
-    });
-
+   
 });
-
-
-
-
-//    $("#good-narrative").click(function () {
-//        var one = $("#goodinfo");
-//
-//
-//        $("span").delay(1000).animate({
-//            fontSize: '30px'
-//        }, "slow");
-//
-//
-//        one.animate({
-//            opacity: '1',
-//            top: '200px'
-//        }, 500);
-//    });
-//
-////WHEN YOUR MOUSE LEAVES THE SUB LINK GOES BACK TO HIDING
-//    $("#good-narrative").mouseleave(function () {
-//
-//        $("div#goodinfo").delay(2000).animate({
-//            opacity: '0',
-//            top: '0px'
-//        });
-//
-//
-//    });
-//    
-//    //    CLICK BAD and
-//    $("#bad-narrative").click(function () {
-//        var two = $("#badinfo");
-//
-//        two.animate({
-//            opacity: '1',
-//            top: '200px'
-//        }, 500);
-//
-//        $("span").delay(1000).animate({
-//            fontSize: '30px'
-//        }, "slow");
-//        $("#badinfo a").css("color", "orangered");
-//
-//    });
-//
-//
-////WHEN YOUR MOUSE LEAVES THE SUB LINK GOES BACK TO HIDING
-//    $("#bad-narrative").mouseleave(function () {
-//
-//        $("div#badinfo").delay(2000).animate({
-//            opacity: '0',
-//            top: '0px'
-//        });
-//
-//
-//    });
-//    
